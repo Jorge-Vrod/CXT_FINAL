@@ -1,3 +1,5 @@
+package com.example.city;
+
 public class City {
     int city_id;
     String city_name;
