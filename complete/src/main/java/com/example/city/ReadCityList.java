@@ -9,11 +9,15 @@ import java.util.stream.Collectors;
 public class ReadCityList {
     List<City> cities;
 
+    public List<City> getCities() {
+        return this.cities;
+    }
+
     public void readFile(String path) {
         this.cities = new ArrayList<City>();
 
         if (path == null) {
-            path = "./data/CList.csv";
+            path = "./src/main/java/com/example/city/data/CList.csv";
         }
 
         try {
