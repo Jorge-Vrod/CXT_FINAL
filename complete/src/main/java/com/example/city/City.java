@@ -11,15 +11,15 @@ public class City {
         this.city_province = city_province;
     }
 
-    public getCityId() {
+    public int getCityId() {
         return city_id;
     }
 
-    public getCityName() {
+    public String getCityName() {
         return city_name;
     }
 
-    public getCityProvince() {
+    public String getCityProvince() {
         return city_province;
     }
 }
