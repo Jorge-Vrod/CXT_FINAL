@@ -1,5 +1,6 @@
 package com.example.springboot;
 
+import com.example.city.Cities;
 import com.example.city.City;
 import com.example.city.ReadCityList;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,12 +8,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @RestController
-public class HelloController {
+public class CityController {
 
 	@RequestMapping("/")
 	public String index() {
 		return "Greetings from Spring Boot!";
+	}
+
+	@GetMapping("/cities")
+	public Cities cities() {
+		ReadCityList cityReader = new ReadCityList();
+		cityReader.readFile();
+
+		return new Cities(cityReader.getCities());
 	}
 
 	@GetMapping("/cities/{id}")
