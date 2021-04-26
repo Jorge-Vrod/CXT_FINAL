@@ -33,4 +33,20 @@ public class CityController {
 		cityReader.readFile();
 		return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
 	}
+
+	@GetMapping("/es_cities")
+	public Cities es_cities() {
+		ReadCityList cityReader = new ReadCityList();
+		cityReader.readFile("./src/main/java/com/example/city/data/CESList.csv");
+
+		return new Cities(cityReader.getCities());
+	}
+
+	@GetMapping("/es_cities/{id}")
+	public City es_cities(@PathVariable Integer id) {
+		ReadCityList cityReader = new ReadCityList();
+
+		cityReader.readFile("./src/main/java/com/example/city/data/CESList.csv");
+		return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
+	}
 }

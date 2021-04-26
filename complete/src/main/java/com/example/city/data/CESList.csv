@@ -1,0 +1,171 @@
+cityId,cityName,cityProvince,population
+1,Barcelona,Catalonia,4588000
+2,Madrid,Madrid,3266126
+3,Sevilla,Andalusia,1212045
+4,Valencia,Valencia,794288
+5,Zaragoza,Aragon,649404
+6,Malaga,Andalusia,574654
+7,Palma,Balearic Islands,416065
+8,Murcia,Murcia,406807
+9,Las Palmas,Canary Islands,379925
+10,A Coruna,Galicia,370610
+11,Donostia,Basque Country,357468
+12,Bilbao,Basque Country,346843
+13,Alicante,Valencia,334887
+14,Cordoba,Andalusia,325701
+15,Valladolid,Castille-Leon,298412
+16,Vigo,Galicia,295364
+17,Gijon,Asturias,271780
+18,Vitoria-Gasteiz,Basque Country,251774
+19,Granada,Andalusia,232462
+20,Badalona,Catalonia,220440
+21,Cartagena,Murcia,214802
+22,Sabadell,Catalonia,213644
+23,Jerez de la Frontera,Andalusia,212749
+24,Santa Cruz,Canary Islands,207312
+25,Pamplona,Navarre,201653
+26,Almeria,Andalusia,198533
+27,Oviedo,Asturias,189434
+28,Mataro,Catalonia,183293
+29,Albacete,Castille-La Mancha,173329
+30,Santander,Cantabria,172539
+31,Castellon de la Plana,Valencia,171728
+32,Burgos,Castille-Leon,170183
+33,La Laguna,Canary Islands,157503
+34,Badajoz,Extremadura,150702
+35,Salamanca,Castille-Leon,144228
+36,Logrono,La Rioja,143698
+37,Huelva,Andalusia,143663
+38,Marbella,Andalusia,143386
+39,Ciudad de Melilla,Melilla,141308
+40,Tarragona,Catalonia,134515
+41,Leon,Castille-Leon,124303
+42,Cadiz,Andalusia,116027
+43,Jaen,Andalusia,112999
+44,Algeciras,Andalusia,111027
+45,Ourense,Galicia,105233
+46,Girona,Catalonia,101852
+47,Lugo,Galicia,98276
+48,Caceres,Extremadura,96126
+49,Lorca,Murcia,94404
+50,Santiago de Compostela,Galicia,92430
+51,El Puerto de Santa Maria,Andalusia,88405
+52,Ciudad de Ceuta,Ceuta,84777
+53,Pontevedra,Galicia,83029
+54,Mijas,Andalusia,82742
+55,Guadalajara,Castille-La Mancha,82376
+56,Aviles,Asturias,78182
+57,Rubi,Catalonia,77464
+58,Toledo,Castille-La Mancha,74632
+59,Gandia,Valencia,74562
+60,Benidorm,Valencia,68721
+61,Benalmadena,Andalusia,68128
+62,Villanueva y Geltru,Catalonia,67086
+63,Ferrol,Galicia,66065
+64,La Linea de la Concepcion,Andalusia,63147
+65,Arrecife,Canary Islands,62988
+66,Zamora,Castille-Leon,61406
+67,Granollers,Catalonia,61275
+68,Linares,Andalusia,59761
+69,Merida,Extremadura,59335
+70,Motril,Andalusia,58020
+71,avila,Castille-Leon,57744
+72,Torrelavega,Cantabria,51494
+73,Villareal,Valencia,50893
+74,Ibiza,Balearic Islands,49783
+75,Portugalete,Basque Country,45766
+76,Antequera,Andalusia,41239
+77,Plasencia,Extremadura,39913
+78,ecija,Andalusia,39873
+79,Tudela,Navarre,36258
+80,Onteniente,Valencia,35347
+81,Burriana,Valencia,34683
+82,Villena,Valencia,33964
+83,Ronda,Andalusia,33877
+84,Castro-Urdiales,Cantabria,32069
+85,Arcos de la Frontera,Andalusia,30700
+86,Puerto de la Cruz,Canary Islands,30468
+87,Mahon,Balearic Islands,29040
+88,eibar,Basque Country,27522
+89,Villanueva de la Serena,Extremadura,25667
+90,Jumilla,Murcia,25600
+91,Villarrobledo,Castille-La Mancha,25184
+92,Almonte,Andalusia,24191
+93,Laguna de Duero,Castille-Leon,22725
+94,Torre del Mar,Andalusia,22168
+95,Moguer,Andalusia,22088
+96,Palafrugell,Catalonia,21049
+97,Loja,Andalusia,20342
+98,Requena,Valencia,20254
+99,Guadix,Andalusia,18422
+100,Navalmoral de la Mata,Extremadura,17129
+101,Ejea de los Caballeros,Aragon,16783
+102,Azpeitia,Basque Country,14936
+103,Noya,Galicia,14263
+104,Cuevas del Almanzora,Andalusia,14081
+105,Socuellamos,Castille-La Mancha,12139
+106,Olivenza,Extremadura,11963
+107,Palos de la Frontera,Andalusia,11289
+108,Santona,Cantabria,11024
+109,Tafalla,Navarre,10595
+110,La Baneza,Castille-Leon,10338
+111,Canteras,Murcia,10178
+112,Miajadas,Extremadura,9607
+113,Piedras Blancas,Asturias,9533
+114,Puigcerda,Catalonia,9258
+115,Valldoreix,Catalonia,8401
+116,Corella,Navarre,7971
+117,Cintruenigo,Navarre,7903
+118,Talayuela,Extremadura,7371
+119,Porto Cristo,Balearic Islands,7355
+120,Moraleja,Extremadura,6750
+121,San Adrian,Navarre,6292
+122,Arroyo de la Luz,Extremadura,5811
+123,Valencia de Alcantara,Extremadura,5397
+124,Mutriku,Basque Country,5333
+125,La Herradura,Andalusia,5133
+126,Garachico,Canary Islands,4871
+127,Lodosa,Navarre,4816
+128,Malpartida de Plasencia,Extremadura,4602
+129,Hornachuelos,Andalusia,4497
+130,Viana,Navarre,4209
+131,Hervas,Extremadura,3976
+132,Olite,Navarre,3946
+133,Villargordo,Andalusia,3882
+134,Cascante,Navarre,3864
+135,Azagra,Navarre,3843
+136,Luarca,Asturias,3842
+137,Ribaforada,Navarre,3750
+138,Mendavia,Navarre,3547
+139,Viella,Catalonia,3491
+140,San Francisco Javier,Balearic Islands,3475
+141,Milagro,Navarre,3416
+142,Oza de los Rios,Galicia,3204
+143,Cortes,Navarre,3151
+144,Estartit,Catalonia,3025
+145,Leiza,Navarre,2913
+146,Marcilla,Navarre,2858
+147,Villafranca,Navarre,2847
+148,Puente la Reina,Navarre,2840
+149,Jarandilla de la Vera,Extremadura,2828
+150,Ribadesella,Asturias,2772
+151,Caparroso,Navarre,2766
+152,Vegadeo,Asturias,2725
+153,Losar de la Vera,Extremadura,2699
+154,Alcuescar,Extremadura,2593
+155,Madronera,Extremadura,2533
+156,Carcastillo,Navarre,2495
+157,Fustinana,Navarre,2490
+158,Echarri-Aranaz,Navarre,2483
+159,Ablitas,Navarre,2481
+160,Funes,Navarre,2440
+161,Valtierra,Navarre,2412
+162,Valverde del Fresno,Extremadura,2309
+163,Palencia,Castille-Leon,
+164,Lleida,Catalonia,
+165,Segovia,Castille-Leon,
+166,Huesca,Aragon,
+167,Ciudad Real,Castille-La Mancha,
+168,Soria,Castille-Leon,
+169,Teruel,Aragon,
+170,Cuenca,Castille-La Mancha,
