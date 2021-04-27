@@ -28,6 +28,12 @@ public class CityControllerTest {
 	}
 
 	@Test
+	public void getCitiesId() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/cities/17").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk()).andExpect(content().json("{\"cityId\":17,\"cityName\":\"CANGAS\",\"cityProvince\":\"PONTEVEDRA\"}"));
+	}
+
+	@Test
 	public void getEscities() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/es_cities").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
