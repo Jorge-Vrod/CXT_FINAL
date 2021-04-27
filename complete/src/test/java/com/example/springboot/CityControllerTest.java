@@ -28,6 +28,12 @@ public class CityControllerTest {
 	}
 
 	@Test
+	public void getCitiesId() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/cities/17").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk()).andExpect(content().json("{\"cityId\":17,\"cityName\":\"CANGAS\",\"cityProvince\":\"PONTEVEDRA\"}"));
+	}
+
+	@Test
 	public void getEscities() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/es_cities").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
@@ -41,4 +47,14 @@ public class CityControllerTest {
 				.andExpect(content().json("{\"cities\":[\"VIGO\",\"A CORUNA\",\"OURENSE\",\"LUGO\",\"SANTIAGO DE COMPOSTELA\",\"PONTEVEDRA\",\"FERROL\",\"NARON\",\"VILAGARCIA DE AROUSA\",\"OLEIROS\",\"ARTEIXO\",\"CARBALLO\",\"AMES\",\"CULLEREDO\",\"REDONDELA\",\"RIBEIRA\",\"CANGAS\",\"MARIN\",\"CAMBRE\",\"PONTEAREAS\",\"A ESTRADA\",\"LALIN\",\"O PORRINO\",\"MOANA\",\"BOIRO\",\"MONFORTE DE LEMOS\",\"TEO\",\"NIGRAN\",\"SANXENXO\",\"POIO\"]}"));
 	}
 
+  @Test
+	public void getESCitiesId() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/es_cities/170").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().json("{\"cityId\":170,\"cityName\":\"Cuenca\",\"cityProvince\":\"Castille-La Mancha\"}"));
+
+		mvc.perform(MockMvcRequestBuilders.get("/es_cities/1").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().json("{\"cityId\":1,\"cityName\":\"Barcelona\",\"cityProvince\":\"Catalonia\"}"));
+	}
 }
