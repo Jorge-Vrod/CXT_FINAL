@@ -50,7 +50,4 @@ public class CityControllerTest {
 				.andExpect(status().isOk())
 				.andExpect(content().json("{\"cityId\":1,\"cityName\":\"Barcelona\",\"cityProvince\":\"Catalonia\"}"));
 	}
-
-
-
 }
