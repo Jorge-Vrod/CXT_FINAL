@@ -41,6 +41,13 @@ public class CityControllerTest {
 	}
 
 	@Test
+	public void getCities() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/cities").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().json("{\"cities\":[\"VIGO\",\"A CORUNA\",\"OURENSE\",\"LUGO\",\"SANTIAGO DE COMPOSTELA\",\"PONTEVEDRA\",\"FERROL\",\"NARON\",\"VILAGARCIA DE AROUSA\",\"OLEIROS\",\"ARTEIXO\",\"CARBALLO\",\"AMES\",\"CULLEREDO\",\"REDONDELA\",\"RIBEIRA\",\"CANGAS\",\"MARIN\",\"CAMBRE\",\"PONTEAREAS\",\"A ESTRADA\",\"LALIN\",\"O PORRINO\",\"MOANA\",\"BOIRO\",\"MONFORTE DE LEMOS\",\"TEO\",\"NIGRAN\",\"SANXENXO\",\"POIO\"]}"));
+	}
+
+  @Test
 	public void getESCitiesId() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/es_cities/170").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
