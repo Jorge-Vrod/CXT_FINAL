@@ -23,5 +23,5 @@ GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push deploy master
 ssh git@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR/complete
   ./gradlew test
-  ./gradlew bootRun
+  #./gradlew bootRun
 EOF
