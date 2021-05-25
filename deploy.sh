@@ -1,5 +1,9 @@
 #!/bin/bash
 
+$IP = 13.36.159.214
+$PORT = 22
+$DEPLOY_DIR = /home/git/CXTDir
+
 eval "$(ssh-agent -s)" # Start ssh-agent cache
 chmod 600 .travis/id_rsa # Allow read access to the private key
 ssh-add .travis/id_rsa # Add the private key to SSH
