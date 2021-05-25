@@ -10,7 +10,7 @@ ssh-add deploy_rsa # Add the private key to SSH
 
 git config --global push.default matching
 echo "git 1"
-git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR -o "StrictHostKeyChecking no"
+git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR
 echo "git 2"
 git push deploy master
 echo "git 3"
