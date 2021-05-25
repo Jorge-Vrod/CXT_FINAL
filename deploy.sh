@@ -2,7 +2,7 @@
 
 IP="13.36.159.214"
 PORT="22"
-DEPLOY_DIR="/home/git/CXTDir"
+DEPLOY_DIR="/home/git/CXTSpring"
 
 eval "$(ssh-agent -s)" # Start ssh-agent cache
 chmod 600 deploy_rsa # Allow read access to the private key
