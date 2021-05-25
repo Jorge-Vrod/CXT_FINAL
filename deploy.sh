@@ -25,6 +25,8 @@ ssh git@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR/complete
   echo "TEST EMPEZADO"
   ./gradlew test
-  echo "TEST ACABADO"
-  #./gradlew bootRun
+  echo "BOOT EMPEZADO"
+  ./gradlew bootRun &
+  disown -h
+  echo "ACABADO"
 EOF
