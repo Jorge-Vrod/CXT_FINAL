@@ -19,7 +19,7 @@ GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push deploy master
 
 #git push deploy master
 
-# Skip this command if you don't need to execute any additional commands after deploying.
+# Skip this command i you don't need to execute any additional commands after deploying.
 ssh git@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR/complete
   ./gradlew test
