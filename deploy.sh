@@ -12,7 +12,12 @@ git config --global push.default matching
 echo "git 1"
 git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR
 echo "git 2"
-git push deploy master
+echo $(git remote -v)
+GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push deploy master
+
+
+
+#git push deploy master
 echo "git 3"
 # Skip this command if you don't need to execute any additional commands after deploying.
 #ssh git@$IP -p $PORT <<EOF
