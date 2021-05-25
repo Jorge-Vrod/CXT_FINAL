@@ -9,11 +9,13 @@ chmod 600 deploy_rsa # Allow read access to the private key
 ssh-add deploy_rsa # Add the private key to SSH
 
 git config --global push.default matching
-git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR -y -o "StrictHostKeyChecking no"
+echo "git 1"
+git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR -o "StrictHostKeyChecking no"
+echo "git 2"
 git push deploy master
-
+echo "git 3"
 # Skip this command if you don't need to execute any additional commands after deploying.
-ssh git@$IP -p $PORT <<EOF
-  cd $DEPLOY_DIR
-  crystal build --release --no-debug index.cr # Change to whatever commands you need!
-EOF
+#ssh git@$IP -p $PORT <<EOF
+#  cd $DEPLOY_DIR
+#  crystal build --release --no-debug index.cr # Change to whatever commands you need!
+#EOF
