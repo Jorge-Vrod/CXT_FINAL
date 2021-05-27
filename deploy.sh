@@ -26,11 +26,10 @@ ssh git@$IP -p $PORT <<EOF
 
   PROCESO=$(ps u | grep "-classpath /home/git/CXTSpring/complete/" | grep -v grep)
   PID=echo $PROCESO | cut -d' ' -f2 2>/dev/null
+  echo "$PID"
   kill $PID
 
-  echo "TEST EMPEZADO"
   ./gradlew test
-  echo "BOOT EMPEZADO"
   ./gradlew bootRun &
-  echo "ACABADO"
+
 EOF
