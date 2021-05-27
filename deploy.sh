@@ -23,10 +23,14 @@ GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push deploy master
 echo "SSHHHHHHHHHHHHHHHHHHH"
 ssh git@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR/complete
+
+  PROCESO=$(ps u | grep "-classpath /home/git/CXTSpring/complete/" | grep -v grep)
+  PID=echo $PROCESO | cut -d' ' -f2 2>/dev/null
+  kill $PID
+
   echo "TEST EMPEZADO"
   ./gradlew test
   echo "BOOT EMPEZADO"
   ./gradlew bootRun &
-  disown -h
   echo "ACABADO"
 EOF
