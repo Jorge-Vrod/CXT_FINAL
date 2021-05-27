@@ -29,4 +29,5 @@ ssh git@$IP -p $PORT <<EOF
   echo "TEST"
   #./gradlew test
   ./gradlew bootRun &
+  exit
 EOF
