@@ -24,9 +24,9 @@ echo "SSHHHHHHHHHHHHHHHHHHH"
 ssh git@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR/complete
   echo "MATANDO"
-  #./gradlew --stop
+  ./gradlew --stop
   
   echo "TEST"
-  ./gradlew test
+  #./gradlew test
   ./gradlew bootRun &
 EOF
