@@ -21,5 +21,5 @@ GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push deploy master
 
 # Skip this command i you don't need to execute any additional commands after deploying.
 echo "SSHHHHHHHHHHHHHHHHHHH"
-ssh -i claves_cxt.pem git@13.36.159.214 "cd /home/git/CXTSpring/complete; ./gradlew bootRun" &
+ssh git@13.36.159.214 "cd /home/git/CXTSpring/complete; ./gradlew bootRun" &
 
