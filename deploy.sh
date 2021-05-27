@@ -28,9 +28,5 @@ ssh git@$IP -p $PORT <<EOF
   sleep 3
   echo "TEST"
   ./gradlew test
-  sleep 3
-  echo "RUN"
   ./gradlew bootRun &
-  exit
-  echo "FIN"
 EOF
