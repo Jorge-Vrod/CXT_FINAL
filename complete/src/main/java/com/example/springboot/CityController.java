@@ -11,29 +11,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
+import com.example.springboot.RollbarToken;
 
 @RestController
 public class CityController {
 
 	@RequestMapping("/")
 	public String index() throws Exception {
-		Rollbar rollbar = Rollbar.init(withAccessToken("de4ac55a62664f59bc04d9677cea9b48").build());
-		rollbar.log("Hello, Rollbar");
-		rollbar.close(true);
+		RollbarToken.getInstance().log("/");
 		return "Greetings from Spring Boot!";
 	}
+
 	@GetMapping("/cities")
 	public Cities cities() {
+		RollbarToken.getInstance().log("/cities");
 		ReadCityList cityReader = new ReadCityList();
 		cityReader.readFile();
-
 		return new Cities(cityReader.getCities());
 	}
 
 	@GetMapping("/cities/{id}")
 	public City cities (@PathVariable Integer id) {
 		ReadCityList cityReader = new ReadCityList();
-
+		RollbarToken.getInstance().log("/cities/{id}");
 		cityReader.readFile();
 		return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
 	}
@@ -49,7 +49,7 @@ public class CityController {
 	@GetMapping("/es_cities/{id}")
 	public City es_cities(@PathVariable Integer id) {
 		ReadCityList cityReader = new ReadCityList();
-
+		RollbarToken.getInstance().log("/es_cities/{id}");
 		cityReader.readFile("./src/main/java/com/example/city/data/CESList.csv");
 		return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
 	}
