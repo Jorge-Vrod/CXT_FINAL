@@ -28,7 +28,7 @@ ssh git@$IP -p $PORT <<EOF
   
   echo "TEST"
   #./gradlew test
-  nohup ./gradlew bootRun &
+  nohup ./gradlew bootRun > Output.out 2> Error.err < /dev/null &
 EOF
 
 
