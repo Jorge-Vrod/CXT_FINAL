@@ -9,15 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
+import com.rollbar.notifier.Rollbar;
 
 @RestController
 public class CityController {
 
 	@RequestMapping("/")
-	public String index() {
+	public String index() throws Exception {
+		Rollbar rollbar = Rollbar.init(withAccessToken("de4ac55a62664f59bc04d9677cea9b48").build());
+		rollbar.log("Hello, Rollbar");
+		rollbar.close(true);
 		return "Greetings from Spring Boot!";
 	}
-
 	@GetMapping("/cities")
 	public Cities cities() {
 		ReadCityList cityReader = new ReadCityList();

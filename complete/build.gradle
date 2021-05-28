@@ -20,6 +20,9 @@ dependencies {
 	// tag::tests[]
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	// end::tests[]
+
+	//ROLLBAR
+	compile 'com.rollbar:rollbar-java:1.+'
 }
 
 test {
