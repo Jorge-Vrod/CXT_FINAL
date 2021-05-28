@@ -20,7 +20,7 @@ GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push deploy master
 #git push deploy master
 
 # Skip this command i you don't need to execute any additional commands after deploying.
-echo "SHHHHHHHHHHHH"
+echo "SHHHHHHHHHHHHH"
 ssh git@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR/complete
   echo "MATANDO"
