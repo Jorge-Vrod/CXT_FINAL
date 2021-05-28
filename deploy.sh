@@ -25,11 +25,7 @@ ssh git@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR/complete
   echo "MATANDO"
   ./gradlew --stop
-  
   echo "TEST"
   #./gradlew test
   nohup ./gradlew bootRun > Output.out 2> Error.err < /dev/null &
 EOF
-
-
-
