@@ -26,6 +26,6 @@ ssh git@$IP -p $PORT <<EOF
   echo "MATANDO"
   ./gradlew --stop
   echo "TEST"
-  #./gradlew test
+  ./gradlew test
   nohup ./gradlew bootRun > Output.out 2> Error.err < /dev/null &
 EOF
