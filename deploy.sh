@@ -34,4 +34,3 @@ if [ "$TRAVIS_BRANCH" = "master" ]; then
     echo "RUN"
     nohup ./gradlew bootRun > Output.out 2> Error.err < /dev/null &
   EOF
-fi
