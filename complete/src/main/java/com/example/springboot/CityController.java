@@ -30,8 +30,8 @@ public class CityController {
 		try {
 			ReadCityList cityReader = new ReadCityList();
 			cityReader.readFile();
-			throw new EmptyStackException();
-			//return new Cities(cityReader.getCities());
+			//throw new EmptyStackException();
+			return new Cities(cityReader.getCities());
 		} catch (Exception e) {
 			RollbarToken.getInstance().log("/cities: " + e.toString());
 			return null;
