@@ -22,7 +22,7 @@ dependencies {
 	// end::tests[]
 
 	//ROLLBAR
-	implementation 'com.rollbar:rollbar-java:1.+'
+	implementation 'com.rollbar:rollbar-java:1.7.1'
 }
 
 test {
