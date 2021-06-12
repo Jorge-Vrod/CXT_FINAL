@@ -13,6 +13,9 @@ import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
 import com.example.springboot.RollbarToken;
 
+
+import java.util.EmptyStackException;
+
 @RestController
 public class CityController {
 
@@ -24,33 +27,51 @@ public class CityController {
 
 	@GetMapping("/cities")
 	public Cities cities() {
-		RollbarToken.getInstance().log("/cities");
-		ReadCityList cityReader = new ReadCityList();
-		cityReader.readFile();
-		return new Cities(cityReader.getCities());
+		try {
+			ReadCityList cityReader = new ReadCityList();
+			cityReader.readFile();
+			throw new EmptyStackException();
+			//return new Cities(cityReader.getCities());
+		} catch (Exception e) {
+			RollbarToken.getInstance().log("/cities: " + e.toString());
+			return null;
+		}
+
 	}
 
 	@GetMapping("/cities/{id}")
 	public City cities (@PathVariable Integer id) {
-		ReadCityList cityReader = new ReadCityList();
-		RollbarToken.getInstance().log("/cities/{id}");
-		cityReader.readFile();
-		return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
+		try {
+			ReadCityList cityReader = new ReadCityList();
+			cityReader.readFile();
+			return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
+		} catch (Exception e) {
+			RollbarToken.getInstance().log("/cities/" + id + ": " + e.toString());
+			return null;
+		}
 	}
 
 	@GetMapping("/es_cities")
 	public Cities es_cities() {
-		ReadCityList cityReader = new ReadCityList();
-		cityReader.readFile("./src/main/java/com/example/city/data/CESList.csv");
-
-		return new Cities(cityReader.getCities());
+		try {
+			ReadCityList cityReader = new ReadCityList();
+			cityReader.readFile("./src/main/java/com/example/city/data/CESList.csv");
+			return new Cities(cityReader.getCities());
+		} catch (Exception e) {
+			RollbarToken.getInstance().log("/es_cities: " + e.toString());
+			return null;
+		}
 	}
 
 	@GetMapping("/es_cities/{id}")
 	public City es_cities(@PathVariable Integer id) {
-		ReadCityList cityReader = new ReadCityList();
-		RollbarToken.getInstance().log("/es_cities/{id}");
-		cityReader.readFile("./src/main/java/com/example/city/data/CESList.csv");
-		return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
+		try {
+			ReadCityList cityReader = new ReadCityList();
+			cityReader.readFile("./src/main/java/com/example/city/data/CESList.csv");
+			return cityReader.getCities().get(id - 1); // Correction factor to ensure that id aligns with positions
+		} catch (Exception e) {
+			RollbarToken.getInstance().log("/es_cities/" + id + ": " + e.toString());
+			return null;
+		}
 	}
 }
