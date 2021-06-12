@@ -33,4 +33,5 @@ if [ "$TRAVIS_BRANCH" = "master" ]; then
     cd $DEPLOY_DIR/complete
     echo "RUN"
     nohup ./gradlew bootRun > Output.out 2> Error.err < /dev/null &
-  EOF
+EOF
+fi
