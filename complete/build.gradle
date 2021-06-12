@@ -20,12 +20,10 @@ dependencies {
 	// tag::tests[]
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	//end::tests[]
-
-	//ROLLBAR
-	//implementation 'com.rollbar:rollbar-java:1.7.1'
 	implementation 'com.rollbar:rollbar-spring-boot-webmvc:1.7.8'
 	}
-
+//ROLLBAR
+//implementation 'com.rollbar:rollbar-java:1.7.1'
 test {
 	useJUnitPlatform()
 }
