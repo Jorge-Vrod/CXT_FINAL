@@ -1,28 +1,22 @@
 #!/bin/bash
-IP="13.36.159.214"
+IP="13.36.159.214" # IP remota
 PORT="22"
-DEPLOY_DIR="/home/git/CXTSpring"
+DEPLOY_DIR="/home/git/CXTSpring" # Directorio de despliegue
 
-eval "$(ssh-agent -s)" # Start ssh-agent cache
-chmod 600 deploy_rsa # Allow read access to the private key
-ssh-add deploy_rsa # Add the private key to SSH
+eval "$(ssh-agent -s)"
+chmod 600 deploy_rsa
+ssh-add deploy_rsa
 
+echo "Accediendo a repositorio"
 git config --global push.default matching
-
 git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR
-
-echo $(git remote -v)
 GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push deploy master
 
 
-
-#git push deploy master
-
-# Skip this command i you don't need to execute any additional commands after deploying.
-echo "SHHHHHHHHHHHHH"
+echo "Conectando a máquina de despliegue"
 ssh git@$IP -p $PORT <<EOF
 cd $DEPLOY_DIR/complete
-echo "MATANDO"
+echo "Matando servicio antiguo e inciando tests"
 ./gradlew --stop
 echo "TEST"
 ./gradlew test
@@ -30,6 +24,6 @@ EOF
 
 ssh git@$IP -p $PORT <<EOF
 cd $DEPLOY_DIR/complete
-echo "RUN"
+echo "Arrancando servicio actualizado"
 nohup ./gradlew bootRun > Output.out 2> Error.err < /dev/null &
 EOF
